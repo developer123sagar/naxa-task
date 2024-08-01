@@ -66,4 +66,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  .h{
+    @apply border border-red-500
+  }
 }
