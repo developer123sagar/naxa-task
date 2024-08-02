@@ -18,10 +18,14 @@ const Header = () => {
         <img
           src="/logo.png"
           alt="Naxa"
-          className="object-contain w-[110px] h-[32px]"
+          className="object-contain w-[110px] h-[32px] cursor-pointer"
         />
         <HeaderNavigationMenu />
-        <Button className="bg-yellow-1 rounded-none px-8 text-blue-1">Let's talk</Button>
+        <Button className="bg-yellow-1 rounded-none px-8 ">
+          <p className="text-blue-1 hover:-translate-x-1 transition duration-300">
+            Let's talk
+          </p>
+        </Button>
       </div>
     </header>
   );
