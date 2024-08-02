@@ -66,7 +66,18 @@
   body {
     @apply bg-background text-foreground;
   }
-  .h{
-    @apply border border-red-500
+  .flex-center {
+    @apply flex items-center justify-center;
   }
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+  .h {
+    @apply border border-red-500;
+  }
+}
+
+.hero-bg {
+  background-image: url("/public/wave.svg");
+  background-repeat: no-repeat;
 }

@@ -14,7 +14,7 @@ const Header = () => {
           Earthquake Response 2023. Check them out
         </a>
       </div>
-      <div className="py-1 px-10 flex items-center justify-between">
+      <div className="py-1 px-10 flex items-center justify-between bg-gray-100">
         <img
           src="/logo.png"
           alt="Naxa"
