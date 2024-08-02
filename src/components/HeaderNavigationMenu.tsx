@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
 import {
@@ -17,11 +18,11 @@ export function HeaderNavigationMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <a href="#">
+          <Link to={"/contact"}>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Services
             </NavigationMenuLink>
-          </a>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Portfolio</NavigationMenuTrigger>
@@ -49,11 +50,11 @@ export function HeaderNavigationMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <a href="#">
+          <Link to={"#"}>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               GeoAI
             </NavigationMenuLink>
-          </a>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Events & Media</NavigationMenuTrigger>
@@ -72,11 +73,11 @@ export function HeaderNavigationMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <a href="#">
+          <Link to={"#"}>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Blogs
             </NavigationMenuLink>
-          </a>
+          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

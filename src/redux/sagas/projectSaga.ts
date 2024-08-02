@@ -5,10 +5,10 @@ import { fetchProjectsFailure, fetchProjectsSuccess } from "@/redux/actions/proj
 import { FETCH_PROJECTS_REQUEST, Project } from '@/types';
 
 
-function* fetchProjectsSaga(): Generator {
+function* fetchProjectsSaga() {
     try {
-        const projects: Project[] = yield call(fetchProjects);
-        yield put(fetchProjectsSuccess(projects));
+        const res: Project[] = yield call(fetchProjects);
+        yield put(fetchProjectsSuccess(res));
     } catch (error: any) {
         yield put(fetchProjectsFailure(error?.message));
     }

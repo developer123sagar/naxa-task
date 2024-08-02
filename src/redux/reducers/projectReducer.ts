@@ -1,6 +1,6 @@
 import { FETCH_PROJECTS_FAILURE, FETCH_PROJECTS_REQUEST, FETCH_PROJECTS_SUCCESS, Project, ProjectActionTypes } from "@/types";
 
-interface ProjectState {
+export interface ProjectState {
     loading: boolean;
     projects: Project[];
     error: string | null;
