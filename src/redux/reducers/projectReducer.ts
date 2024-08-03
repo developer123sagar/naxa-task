@@ -29,7 +29,7 @@ export const projectReducer = (
             return {
                 ...state,
                 loading: false,
-                projects: action.payload
+                projects: action.payload?.slice(90, 100)
             };
         case FETCH_PROJECTS_FAILURE:
             return {
@@ -47,7 +47,7 @@ export const projectReducer = (
             return {
                 ...state,
                 loading: false,
-                category: action.payload?.filter(item => item.category_of === 'Portfolio')
+                category: action.payload?.filter(item => item.category_of === 'Portfolio' || item.category_of === null)
             };
         case FETCH_CATEGORY_FAILURE:
             return {

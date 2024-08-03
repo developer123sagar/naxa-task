@@ -15,7 +15,7 @@ const Hero = () => {
   }, [dispatch]);
 
   return (
-    <section className="h-screen bg-gray-50">
+    <section>
       <div className="hero-bg w-full h-[40vh] bg-gray-200/60">
         <div className="flex-col-center h-full">
           <h1 className="text-yellow-3 uppercase tracking-tighter">
@@ -28,10 +28,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-[90%] mx-auto bg-white-1 shadow-xl -mt-12 grid grid-cols-5 gap-5 py-4 px-6 items-center">
+      <div className="w-[90%] mx-auto bg-white-1 shadow-xl -mt-12 grid grid-cols-5 gap-2 py-2 px-4 items-center">
         <h2
           className={cn(
-            "cursor-pointer text-sm p-2",
+            "cursor-pointer text-sm p-2 hover:bg-yellow-1 hover:text-blue-1 transition-colors duration-1000",
             !selectedCategory ? "bg-yellow-1 text-blue-1" : "text-gray-1"
           )}
           onClick={() => setSelectedCategory("")}
@@ -41,8 +41,9 @@ const Hero = () => {
 
         {category?.map((item) => (
           <h2
+            key={item.id}
             className={cn(
-              "cursor-pointer text-sm p-2",
+              "cursor-pointer text-sm p-2 hover:bg-yellow-1 hover:text-blue-1 transition-colors duration-1000",
               selectedCategory === item.title
                 ? "text-blue-1 bg-yellow-1"
                 : "text-gray-1"

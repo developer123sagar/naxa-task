@@ -76,3 +76,13 @@ export type CategoryActionTypes =
     | FetchCategoryRequest
     | FetchCategorySuccess
     | FetchCategoryFailure;
+
+export type ProjectCardProps = {
+    title: string;
+    subtitle: string;
+    client: string;
+    startDate: string;
+    endDate: string;
+    img: string;
+    className?: string;
+};
