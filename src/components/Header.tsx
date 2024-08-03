@@ -1,9 +1,11 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import { HeaderNavigationMenu } from "@/components/HeaderNavigationMenu";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header>
       <div className="bg-yellow-1 text-center py-1">
@@ -23,7 +25,10 @@ const Header = () => {
           className="object-contain w-[110px] h-[32px] cursor-pointer"
         />
         <HeaderNavigationMenu />
-        <Button className="bg-yellow-1 rounded-none w-[150px]">
+        <Button
+          onClick={() => navigate("/contact")}
+          className="bg-yellow-1 hover:bg-yellow-3 transition-colors duration-300 rounded-none w-[150px]"
+        >
           <p className="text-blue-1 flex items-center gap-2 hover:-translate-x-1 group transition duration-300">
             Let's talk
             <ArrowRight className="hidden group-hover:block" />

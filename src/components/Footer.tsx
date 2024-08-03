@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +10,7 @@ import {
 } from "@/constants";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="w-full bg-gray-50">
@@ -32,7 +33,10 @@ const Footer = () => {
             away.
           </p>
           <div className="flex-center mt-5">
-            <Button className="bg-yellow-1 rounded-none w-[150px]">
+            <Button
+              onClick={() => navigate("/contact")}
+              className="bg-yellow-1 hover:bg-yellow-3 transition-colors duration-300 rounded-none w-[150px]"
+            >
               <p className="text-blue-1 flex items-center gap-2 hover:-translate-x-1 group transition duration-300">
                 Let's talk
                 <ArrowRight className="hidden group-hover:block" />
