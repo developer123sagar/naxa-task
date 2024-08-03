@@ -5,6 +5,7 @@ import {
   FOOTER_COMPANY_LINKS,
   FOOTER_EVENTS_LINKS,
   FOOTER_SERVICE_LINKS,
+  FOOTER_SOCIALMEDIA_LINKS,
 } from "@/constants";
 
 const Footer = () => {
@@ -38,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <footer className="bg-gray-200/60 py-32 pl-20 relative">
+      <footer className="bg-gray-200/60 pt-40 pb-16 px-20 relative">
         <ul className="grid grid-cols-3 gap-10">
           <li>
             <img
@@ -118,6 +119,20 @@ const Footer = () => {
               </Link>
             </div>
           </li>
+        </ul>
+        <ul className="flex justify-between items-center">
+          <li className="flex gap-4 items-center">
+            {FOOTER_SOCIALMEDIA_LINKS.map((item) => (
+              <a href={item.link} key={item.img} target="_blank">
+                <img
+                  src={`${item.img}`}
+                  alt={item.img}
+                  className="w-4 h-4 object-contain"
+                />
+              </a>
+            ))}
+          </li>
+          <li className="text-gray-1 text-[10px]">© NAXA 2023. All Rights Reserved.</li>
         </ul>
       </footer>
     </>

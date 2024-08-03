@@ -68,3 +68,10 @@ export const FOOTER_EVENTS_LINKS = [
     "Media",
     "Publications"
 ]
+
+export const FOOTER_SOCIALMEDIA_LINKS = [
+    { img: "/facebook.svg", link: "https://www.facebook.com/naxa.np" },
+    { img: "/linkedin.svg", link: "https://www.linkedin.com/company/13230177/" },
+    { img: "/twitter.svg", link: "https://x.com/naxanp" },
+    { img: "/instagram.svg", link: "https://www.instagram.com/naxanp/" },
+]
