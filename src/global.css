@@ -81,3 +81,7 @@
   background-image: url("/wave.svg");
   background-repeat: no-repeat;
 }
+
+.footer-up {
+  background: linear-gradient(59deg, #05f, #05f 20%, #001acb 70%, #001acb 97%, #001acb) no-repeat padding-box;
+}
