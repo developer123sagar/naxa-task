@@ -33,3 +33,14 @@ export const events: { title: string; img: string }[] = [
     },
 ];
 // header navigation list part finish
+
+// background colors for projects card
+export const bgColors = [
+    "bg-blue-1",
+    "bg-gray-1",
+    "bg-gray-2",
+    "bg-[#b30732]",
+    "bg-[#1281a8]",
+    "bg-[#f8e1e5]",
+    "bg-[#25a596]",
+];

@@ -9,15 +9,22 @@ const ProjectCard = ({
   endDate,
   img,
   className,
+  bgColor,
 }: ProjectCardProps) => {
   return (
     <div
       className={cn(
-        "bg-blue-1 flex flex-col justify-between shadow hover:shadow-2xl hover:-translate-y-5 transition-all duration-500 cursor-pointer",
-        className
+        "flex flex-col justify-between shadow hover:shadow-2xl hover:-translate-y-5 transition-all duration-500 cursor-pointer",
+        className,
+        bgColor
       )}
     >
-      <div className="py-6 px-8 text-white-1">
+      <div
+        className={cn(
+          "py-6 px-8",
+          bgColor === "bg-[#f8e1e5]" ? "text-black" : "text-white-1"
+        )}
+      >
         <h3 className="text-base font-medium">{title}</h3>
         <p className="text-xs py-4">{subtitle}</p>
         <ul className="flex justify-between">

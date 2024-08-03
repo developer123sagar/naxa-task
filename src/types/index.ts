@@ -85,4 +85,5 @@ export type ProjectCardProps = {
     endDate: string;
     img: string;
     className?: string;
+    bgColor: string;
 };
