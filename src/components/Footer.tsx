@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
@@ -31,9 +32,10 @@ const Footer = () => {
             away.
           </p>
           <div className="flex-center mt-5">
-            <Button className="bg-yellow-1 rounded-none px-10">
-              <p className="text-blue-1 hover:-translate-x-1 transition duration-300">
+            <Button className="bg-yellow-1 rounded-none w-[150px]">
+              <p className="text-blue-1 flex items-center gap-2 hover:-translate-x-1 group transition duration-300">
                 Let's talk
+                <ArrowRight className="hidden group-hover:block" />
               </p>
             </Button>
           </div>
@@ -132,7 +134,9 @@ const Footer = () => {
               </a>
             ))}
           </li>
-          <li className="text-gray-1 text-[10px]">© NAXA 2023. All Rights Reserved.</li>
+          <li className="text-gray-1 text-[10px]">
+            © NAXA 2023. All Rights Reserved.
+          </li>
         </ul>
       </footer>
     </>

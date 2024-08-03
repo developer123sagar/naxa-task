@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { HeaderNavigationMenu } from "@/components/HeaderNavigationMenu";
 
@@ -14,16 +16,17 @@ const Header = () => {
           Earthquake Response 2023. Check them out
         </a>
       </div>
-      <div className="py-1 px-10 flex items-center justify-between bg-gray-100">
+      <div className="py-1 px-10 flex items-center justify-between bg-gray-200/60">
         <img
           src="/logo.png"
           alt="Naxa"
           className="object-contain w-[110px] h-[32px] cursor-pointer"
         />
         <HeaderNavigationMenu />
-        <Button className="bg-yellow-1 rounded-none px-10">
-          <p className="text-blue-1 hover:-translate-x-1 transition duration-300">
+        <Button className="bg-yellow-1 rounded-none w-[150px]">
+          <p className="text-blue-1 flex items-center gap-2 hover:-translate-x-1 group transition duration-300">
             Let's talk
+            <ArrowRight className="hidden group-hover:block" />
           </p>
         </Button>
       </div>
