@@ -2,6 +2,10 @@ export const FETCH_PROJECTS_REQUEST = 'FETCH_PROJECTS_REQUEST';
 export const FETCH_PROJECTS_SUCCESS = 'FETCH_PROJECTS_SUCCESS';
 export const FETCH_PROJECTS_FAILURE = 'FETCH_PROJECTS_FAILURE';
 
+export const FETCH_CATEGORY_REQUEST = 'FETCH_CATEGORY_REQUEST';
+export const FETCH_CATEGORY_SUCCESS = 'FETCH_CATEGORY_SUCCESS';
+export const FETCH_CATEGORY_FAILURE = 'FETCH_CATEGORY_FAILURE';
+
 export interface Project {
     id: number;
     category_title: string[];
@@ -24,6 +28,17 @@ export interface Project {
     category: number[];
 }
 
+export interface Category {
+    id: number,
+    category_of: string,
+    title: string,
+    description: string;
+    order: number | null,
+    icon: string | null,
+    icon_thumbnail: string | null,
+    highlight: boolean
+}
+
 export interface FetchProjectsRequest {
     type: typeof FETCH_PROJECTS_REQUEST;
 }
@@ -38,7 +53,26 @@ export interface FetchProjectsFailure {
     error: string;
 }
 
-export type ProjectActionTypes = 
+export interface FetchCategoryRequest {
+    type: typeof FETCH_CATEGORY_REQUEST;
+}
+
+export interface FetchCategorySuccess {
+    type: typeof FETCH_CATEGORY_SUCCESS;
+    payload: Category[];
+}
+
+export interface FetchCategoryFailure {
+    type: typeof FETCH_CATEGORY_FAILURE;
+    error: string;
+}
+
+export type ProjectActionTypes =
     | FetchProjectsRequest
     | FetchProjectsSuccess
     | FetchProjectsFailure;
+
+export type CategoryActionTypes =
+    | FetchCategoryRequest
+    | FetchCategorySuccess
+    | FetchCategoryFailure;
