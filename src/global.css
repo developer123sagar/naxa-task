@@ -72,6 +72,12 @@
   .flex-col-center {
     @apply flex flex-col items-center justify-center;
   }
+  .footer-title {
+    @apply text-[12px] font-medium mb-3 text-gray-2;
+  }
+  .footer-link {
+    @apply text-[14px] font-light text-gray-1 hover:text-yellow-3 transition-colors duration-1000 ease-in-out;
+  }
   .h {
     @apply border border-red-500;
   }
@@ -83,5 +89,13 @@
 }
 
 .footer-up {
-  background: linear-gradient(59deg, #05f, #05f 20%, #001acb 70%, #001acb 97%, #001acb) no-repeat padding-box;
+  background: linear-gradient(
+      59deg,
+      #05f,
+      #05f 20%,
+      #001acb 70%,
+      #001acb 97%,
+      #001acb
+    )
+    no-repeat padding-box;
 }

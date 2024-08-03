@@ -27,7 +27,7 @@ const ProjectCard = ({
       >
         <h3 className="text-base font-medium">{title}</h3>
         <p className="text-xs py-4">{subtitle}</p>
-        <ul className="flex justify-between">
+        <ul className="flex justify-between gap-5">
           <li>
             <span className="text-yellow-3 text-xs">Client</span>
             <p className="text-[10px]">{client}</p>

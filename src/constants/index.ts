@@ -1,4 +1,4 @@
-// header navigation list part start
+// header navigation list part
 export const company: { title: string; img: string }[] = [
     {
         title: "About us",
@@ -32,7 +32,6 @@ export const events: { title: string; img: string }[] = [
         img: "/publication.svg",
     },
 ];
-// header navigation list part finish
 
 // background colors for projects card
 export const bgColors = [
@@ -44,3 +43,28 @@ export const bgColors = [
     "bg-[#f8e1e5]",
     "bg-[#25a596]",
 ];
+
+// footer links
+export const FOOTER_SERVICE_LINKS = [
+    "Software & Apps Development",
+    "GIS Mapping & Analysis",
+    "Data Collection & Visualization",
+    "ICT & Digital Development Research",
+    "Frontier Technologies (Drones, VR..)",
+    "Training & Capacity building (GIS and Web GIS)",
+    "Creative Graphic Design",
+];
+
+export const FOOTER_COMPANY_LINKS = [
+    "About us",
+    "Team",
+    "Work with us",
+    "Awards & Achievements",
+    "Media Kit",
+];
+
+export const FOOTER_EVENTS_LINKS = [
+    "Events",
+    "Media",
+    "Publications"
+]

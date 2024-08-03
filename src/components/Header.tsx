@@ -21,7 +21,7 @@ const Header = () => {
           className="object-contain w-[110px] h-[32px] cursor-pointer"
         />
         <HeaderNavigationMenu />
-        <Button className="bg-yellow-1 rounded-none px-8 ">
+        <Button className="bg-yellow-1 rounded-none px-10">
           <p className="text-blue-1 hover:-translate-x-1 transition duration-300">
             Let's talk
           </p>

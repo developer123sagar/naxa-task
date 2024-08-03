@@ -14,7 +14,7 @@ const Projects = () => {
   }, [dispatch]);
 
   return (
-    <section className="mt-40 bg-gray-50">
+    <section className="py-40 bg-gray-50">
       <div className="w-[90%] mx-auto grid grid-cols-2 flex-wrap gap-y-32">
         {projects?.map((item, id) => (
           <ProjectCard
