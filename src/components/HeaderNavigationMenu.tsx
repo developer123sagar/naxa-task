@@ -18,7 +18,7 @@ export function HeaderNavigationMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link to={"/contact"}>
+          <Link to={"#"}>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Services
             </NavigationMenuLink>

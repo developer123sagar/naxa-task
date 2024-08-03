@@ -23,6 +23,7 @@ const Header = () => {
           src="/logo.png"
           alt="Naxa"
           className="object-contain w-[110px] h-[32px] cursor-pointer"
+          onClick={() => navigate("/")}
         />
         <HeaderNavigationMenu />
         <Button
