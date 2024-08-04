@@ -44,7 +44,7 @@ const Header = () => {
           className="lg:hidden flex items-center text-gray-700"
           onClick={() => setIsDrawerOpen(!isDrawerOpen)}
         >
-          <Menu size={24} />
+          <Menu size={30} color="#FFAB00" />
         </button>
       </div>
       {isDrawerOpen && (
@@ -56,7 +56,7 @@ const Header = () => {
                   onClick={() => setIsDrawerOpen(false)}
                   className="text-gray-700"
                 >
-                  <X size={24} />
+                  <X size={30} />
                 </p>
               </div>
               <Button
