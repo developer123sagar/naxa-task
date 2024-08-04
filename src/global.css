@@ -161,3 +161,17 @@ input[type="file"]::file-selector-button:hover {
 input[type="file"]::file-selector-button:active {
   background-color: #e5e7eb;
 }
+#map {
+  height: 400px;
+  width: 80%;
+  margin: 0px auto;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  #map {
+    width: 95%; 
+    height: 300px; 
+    border-radius: 5px;
+  }
+}

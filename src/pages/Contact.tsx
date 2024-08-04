@@ -59,7 +59,7 @@ const Contact = () => {
     <>
       <Header />
       <section className="bg-gray-50 w-full h-screen overflow-x-hidden">
-        <div className="py-20 px-2 md:px-20 bg-gray-200/60 flex flex-col md:flex-row gap-2 md:gap-10 justify-between">
+        <div className="py-20 px-2 md:px-20 bg-gray-50 flex flex-col md:flex-row gap-2 md:gap-10 justify-between">
           <div className="basis-[30%]">
             <h1 className="font-medium py-2">Contact</h1>
             <div className="flex flex-col gap-y-2">
@@ -88,7 +88,7 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <div className="bg-white-1 p-2 mt-10 sm:mt-0 md:p-8 basis-[65%]">
+          <div className="bg-white-1 p-2 mt-10 sm:mt md:p-8 basis-[65%]">
             <h1 className="text-gray-2">Let's talk!</h1>
             <p className="font-light text-sm my-2 text-black">
               Want to chat? Shoot us an email at{" "}
@@ -241,9 +241,9 @@ const Contact = () => {
             </Form>
           </div>
         </div>
-        {/* <Map /> */}
+        <Map />
+        <Footer />
       </section>
-      <Footer />
     </>
   );
 };

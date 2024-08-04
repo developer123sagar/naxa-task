@@ -25,16 +25,16 @@ const Map = () => {
   }, []);
 
   return (
-    <div className="w-full bg-gray-200/60">
+    <div className="w-full bg-gray-50">
       <div
         id="map"
         ref={mapRef}
-        style={{
-          height: "400px",
-          width: "80%",
-          margin: "0px auto",
-          borderRadius: "16px",
-        }}
+        // style={{
+        //   height: "400px",
+        //   width: "80%",
+        //   margin: "0px auto",
+        //   borderRadius: "16px",
+        // }}
       ></div>
     </div>
   );
