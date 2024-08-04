@@ -88,7 +88,7 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <div className="bg-white-1 p-2 mt-10 sm:mt md:p-8 basis-[65%]">
+          <div className="bg-white-1 p-2 mt-10 sm:mt-0 md:p-8 basis-[65%]">
             <h1 className="text-gray-2">Let's talk!</h1>
             <p className="font-light text-sm my-2 text-black">
               Want to chat? Shoot us an email at{" "}
