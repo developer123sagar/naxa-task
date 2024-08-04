@@ -25,7 +25,7 @@ const Header = () => {
           className="object-contain w-[110px] h-[32px] cursor-pointer"
           onClick={() => navigate("/")}
         />
-        <div className="hidden sm:block">
+        <div className="hidden lg:block">
           <HeaderNavigationMenu />
         </div>
         <Button
