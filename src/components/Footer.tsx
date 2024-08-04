@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <div className="w-full bg-gray-50">
-        <div className="relative top-20 z-40 footer-up w-[80%] mx-auto flex-col-center rounded-2xl h-[240px]">
+        <div className="relative top-20 z-40 footer-up w-[95%] sm:w-[80%] mx-auto flex-col-center rounded-2xl h-[240px]">
           <img
             src="/1.svg"
             className="absolute left-0 bottom-0 rounded-b-2xl"
@@ -23,16 +23,16 @@ const Footer = () => {
             src="/2.svg"
             className="absolute right-0 top-0 rounded-2xl object-contain h-[240px]"
           />
-          <h2 className="text-white-1 text-center text-3xl font-medium">
+          <h2 className="text-white-1 text-center text-3xl font-medium z-30">
             Seeking <span className="text-yellow-2">Collaboration</span>?
           </h2>
-          <p className="text-center text-white-1 mt-4">
+          <p className="text-center text-white-1 mt-4 z-30">
             We constantly look forward to exploring ideas, collaborations, and
             technical <br />
             innovations. If you want to partner with us, we are just an email
             away.
           </p>
-          <div className="flex-center mt-5">
+          <div className="flex-center mt-5 z-30">
             <Button
               onClick={() => navigate("/contact")}
               className="bg-yellow-1 hover:bg-yellow-3 transition-colors duration-300 rounded-none w-[150px]"
@@ -45,8 +45,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <footer className="bg-gray-200/60 pt-40 pb-16 px-20 relative">
-        <ul className="grid grid-cols-3 gap-10">
+      <footer className="bg-gray-200/60 pt-40 pb-16 px-2 sm:px-20 relative">
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-10">
           <li>
             <img
               src="/logo.png"

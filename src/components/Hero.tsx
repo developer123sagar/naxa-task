@@ -21,14 +21,14 @@ const Hero = () => {
           <h1 className="text-yellow-3 uppercase tracking-tighter">
             portfolio
           </h1>
-          <h2 className="text-5xl text-gray-600 font-light">
+          <h2 className="text-2xl sm:text-5xl text-gray-600 font-light">
             Diverse, <span className="text-blue-1">Impactful</span>, and
             Reliable
           </h2>
         </div>
       </div>
 
-      <div className="w-[90%] mx-auto bg-white-1 shadow-xl -mt-12 grid grid-cols-5 gap-2 py-2 px-4 items-center">
+      <div className="w-[90%] mx-auto bg-white-1 shadow-xl -mt-12 grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 gap-2 py-2 px-4 items-center">
         <h2
           className={cn(
             "cursor-pointer text-sm p-2 hover:bg-yellow-1 hover:text-blue-1 transition-colors duration-1000",
@@ -38,7 +38,6 @@ const Hero = () => {
         >
           Key Highlights
         </h2>
-
         {category?.map((item) => (
           <h2
             key={item.id}

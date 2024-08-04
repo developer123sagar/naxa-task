@@ -18,14 +18,16 @@ const Header = () => {
           Earthquake Response 2023. Check them out
         </a>
       </div>
-      <div className="py-1 px-20 flex items-center justify-between bg-gray-200/60">
+      <div className="py-1 px-2 sm:px-20 flex items-center justify-between bg-gray-200/60">
         <img
           src="/logo.png"
           alt="Naxa"
           className="object-contain w-[110px] h-[32px] cursor-pointer"
           onClick={() => navigate("/")}
         />
-        <HeaderNavigationMenu />
+        <div className="hidden sm:block">
+          <HeaderNavigationMenu />
+        </div>
         <Button
           onClick={() => navigate("/contact")}
           className="bg-yellow-1 hover:bg-yellow-3 transition-colors duration-300 rounded-none w-[150px]"

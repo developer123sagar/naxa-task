@@ -15,11 +15,11 @@ const Projects = () => {
 
   return (
     <section className="py-40 bg-gray-50">
-      <div className="w-[90%] mx-auto grid grid-cols-2 flex-wrap gap-y-32">
+      <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 flex-wrap gap-y-32">
         {projects?.map((item, id) => (
           <ProjectCard
             key={item.id}
-            className="w-[75%]"
+            className="w-full md:w-[75%]"
             client={item.clients}
             startDate={item.start_date}
             endDate={item.end_date}
