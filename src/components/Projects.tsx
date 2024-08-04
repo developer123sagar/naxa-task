@@ -19,7 +19,7 @@ const Projects = () => {
         {projects?.map((item, id) => (
           <ProjectCard
             key={item.id}
-            className="w-full md:w-[75%]"
+            className="w-full sm:w-[90%] lg:w-[75%]"
             client={item.clients}
             startDate={item.start_date}
             endDate={item.end_date}

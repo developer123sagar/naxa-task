@@ -16,15 +16,15 @@ import { company, events } from "@/constants";
 export function HeaderNavigationMenu() {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
+      <NavigationMenuList className="flex flex-col lg:flex-row">
+        <NavigationMenuItem className="w-full">
           <Link to={"#"}>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Services
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="w-full">
           <NavigationMenuTrigger>Portfolio</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex flex-col gap-1 w-[300px]">
@@ -33,10 +33,10 @@ export function HeaderNavigationMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="w-full">
           <NavigationMenuTrigger>Company</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="flex flex-col w-[400px] gap-1">
+            <ul className="flex flex-col w-[300px] md:w-[400px] gap-1">
               {company.map((list) => (
                 <ListItem
                   key={list.title}
@@ -49,17 +49,17 @@ export function HeaderNavigationMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="w-full">
           <Link to={"#"}>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               GeoAI
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="w-full">
           <NavigationMenuTrigger>Events & Media</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="flex flex-col w-[400px] gap-1">
+            <ul className="flex flex-col w-[300px] md:w-[400px] gap-1">
               {events.map((list) => (
                 <ListItem
                   key={list.title}
@@ -72,7 +72,7 @@ export function HeaderNavigationMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="w-full">
           <Link to={"#"}>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Blogs
