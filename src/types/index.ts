@@ -87,3 +87,5 @@ export type ProjectCardProps = {
     className?: string;
     bgColor: string;
 };
+
+export type Layer = "district" | "province" | "municipality"
