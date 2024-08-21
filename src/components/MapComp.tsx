@@ -20,7 +20,7 @@ const MapComp = () => {
     });
   }, []);
 
-  return <div id="map" className="w-full h-96 bg-gray-50"></div>;
+  return <div id="map" className="map" tabIndex={0}></div>;
 };
 
 export default MapComp;
