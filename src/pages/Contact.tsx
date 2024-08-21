@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Map from "@/components/Map";
+import MapComp from "@/components/MapComp";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -241,7 +241,7 @@ const Contact = () => {
             </Form>
           </div>
         </div>
-        <Map />
+        <MapComp />
         <Footer />
       </section>
     </>
