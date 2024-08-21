@@ -52,7 +52,7 @@ const MapComp = () => {
             variant={"default"}
             onClick={() => setSelectedLayer(layer as Layer)}
             className={cn(
-              `bg-yellow-1 hover:bg-yellow-3 transition-colors duration-300 rounded-none w-[150px]`
+              `bg-yellow-1 hover:bg-yellow-3 transition-colors duration-300 rounded-none w-[150px] capitalize`
             )}
           >
             {layer}
