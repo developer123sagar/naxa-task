@@ -1,13 +1,14 @@
 import Map from "ol/Map";
+import MVT from "ol/format/MVT";
+import View from "ol/View";
 import VectorTileLayer from "ol/layer/VectorTile";
 import VectorTileSource from "ol/source/VectorTile";
 import { fromLonLat } from "ol/proj";
-import MVT from "ol/format/MVT";
-import View from "ol/View";
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
-import { Layer } from "@/types";
+
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Layer } from "@/types";
 
 const MapComp = () => {
   const [selectedLayer, setSelectedLayer] = useState<Layer>("district");
