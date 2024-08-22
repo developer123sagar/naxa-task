@@ -4,13 +4,13 @@ import VectorTileLayer from "ol/layer/VectorTile";
 import VectorTileSource from "ol/source/VectorTile";
 import { useEffect } from "react";
 
-const useLayerSwitching = (map: Map | null, selectedLayer: string) => {
+const useVectorTileLayer = (map: Map | null, vectorLayer: string) => {
   useEffect(() => {
     if (map) {
       const layer = new VectorTileLayer({
         source: new VectorTileSource({
           format: new MVT(),
-          url: `https://vectortile.naxa.com.np/federal/${selectedLayer}.mvt/?tile={z}/{x}/{y}`,
+          url: `https://vectortile.naxa.com.np/federal/${vectorLayer}.mvt/?tile={z}/{x}/{y}`,
           maxZoom: 14,
         }),
       });
@@ -18,7 +18,7 @@ const useLayerSwitching = (map: Map | null, selectedLayer: string) => {
       map.getLayers().clear();
       map.addLayer(layer);
     }
-  }, [map, selectedLayer]);
+  }, [map, vectorLayer]);
 };
 
-export default useLayerSwitching;
+export default useVectorTileLayer;
