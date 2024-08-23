@@ -9,7 +9,7 @@ const CustomMap = () => {
   return (
     <OLMap zoom={6} center={[84.124, 28.3949]}>
       <Layers>
-        <OLVectorTileLayer source="https://vectortile.naxa.com.np/federal/district.mvt/?tile={z}/{x}/{y}" />
+        <OLVectorTileLayer url="https://vectortile.naxa.com.np/federal/district.mvt/?tile={z}/{x}/{y}" />
       </Layers>
     </OLMap>
   );

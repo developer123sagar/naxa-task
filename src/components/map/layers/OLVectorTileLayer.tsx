@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import useInitializeMap from "@/hooks/useInitializeMap";
 import { RootState, useAppSelector } from "@/redux/store";
 
-const OLVectorTileLayer = ({ source }: { source: string }) => {
+const OLVectorTileLayer = ({ url }: { url: string }) => {
   const { zoom, center } = useAppSelector((state: RootState) => state.map);
   const map = useInitializeMap({ zoom, center });
 
@@ -15,13 +15,13 @@ const OLVectorTileLayer = ({ source }: { source: string }) => {
       const layer = new VectorTileLayer({
         source: new VectorTileSource({
           format: new MVT(),
-          url: source,
+          url: url,
           maxZoom: 14,
         }),
       });
       map.addLayer(layer);
     }
-  }, [map, source]);
+  }, [map, url]);
 
   return null;
 };
