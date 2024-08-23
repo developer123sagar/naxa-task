@@ -15,7 +15,7 @@ const markerStyle = new Style({
   }),
 });
 
-const Marker = ({ map }: { map: Map }) => {
+const Marker = ({ map }: { map?: Map }) => {
   const [markerLayer, setMarkerLayer] = useState<VectorLayer | null>(null);
 
   useEffect(() => {

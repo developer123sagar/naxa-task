@@ -4,20 +4,22 @@ import VectorTileLayer from "ol/layer/VectorTile";
 import VectorTileSource from "ol/source/VectorTile";
 import { useEffect } from "react";
 
-const OLVectorTileLayer = ({ url, map }: { url: string; map: Map }) => {
+const OLVectorTileLayer = ({ url, map }: { url: string; map?: Map }) => {
   useEffect(() => {
-    const layer = new VectorTileLayer({
-      source: new VectorTileSource({
-        format: new MVT(),
-        url: url,
-        maxZoom: 14,
-      }),
-    });
-    map.addLayer(layer);
+    if (map) {
+      const layer = new VectorTileLayer({
+        source: new VectorTileSource({
+          format: new MVT(),
+          url: url,
+          maxZoom: 14,
+        }),
+      });
+      map.addLayer(layer);
 
-    return () => {
-      map.removeLayer(layer);
-    };
+      return () => {
+        map.removeLayer(layer);
+      };
+    }
   }, [map, url]);
 
   return null;
