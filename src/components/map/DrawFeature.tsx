@@ -10,17 +10,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Interaction from "ol/interaction/Interaction";
 
 type DrawType = "Point" | "LineString" | "Polygon" | "Circle";
 
 const DrawFeature = ({ map }: { map?: Map }) => {
   const [drawType, setDrawType] = useState<DrawType>("Point");
   const [draw, setDraw] = useState<Draw | null>(null);
-  const source = new VectorSource({ wrapX: false });
 
-  // Create a vector layer to store drawn features
+  // Handle draw interaction
   useEffect(() => {
+    const source = new VectorSource({ wrapX: false });
+
     const vectorLayer = new VectorLayer({
       source: source,
     });
@@ -29,15 +29,6 @@ const DrawFeature = ({ map }: { map?: Map }) => {
       map.addLayer(vectorLayer);
     }
 
-    return () => {
-      if (map) {
-        map.removeLayer(vectorLayer);
-      }
-    };
-  }, [map]);
-
-  // Handle draw interaction
-  useEffect(() => {
     if (draw && map) {
       map.removeInteraction(draw);
     }
@@ -51,12 +42,6 @@ const DrawFeature = ({ map }: { map?: Map }) => {
       map.addInteraction(newDraw);
       setDraw(newDraw);
     }
-
-    return () => {
-      if (map) {
-        map.removeInteraction(draw as Interaction);
-      }
-    };
   }, [map, drawType]);
 
   return (
