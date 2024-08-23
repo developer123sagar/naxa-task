@@ -13,14 +13,19 @@ const OLMap = ({ zoom, center, children }: OLMapProps) => {
   const map = useInitializeMap({ center, zoom });
 
   return (
-    <div id="map" className="h-[300px] w-[80%] overflow-hidden mx-auto">
-      {/* passing map instance to all the child components */}
-      {React.Children.map(children, (child) =>
-        React.isValidElement<{ map: Map | null }>(child)
-          ? React.cloneElement(child, { map })
-          : child
-      )}
-    </div>
+    <>
+      <div
+        id="map"
+        className="h-[300px] w-[80%] overflow-hidden mx-auto relative"
+      >
+        {/* passing map instance to all the child components */}
+        {React.Children.map(children, (child) =>
+          React.isValidElement<{ map: Map | null }>(child)
+            ? React.cloneElement(child, { map })
+            : child
+        )}
+      </div>
+    </>
   );
 };
 

@@ -1,7 +1,8 @@
 import OLVectorTileLayer from "@/components/map/OLVectorTileLayer";
 import OLMap from "@/components/map/OLMap";
-import Popup from "./map/Popup";
-import Marker from "./map/Marker";
+import DrawFeature from "./map/DrawFeature";
+// import Popup from "./map/Popup";
+// import Marker from "./map/Marker";
 import "ol/ol.css";
 
 // ? https://vectortile.naxa.com.np/federal/${vectorLayer}.mvt/?tile={z}/{x}/{y}
@@ -12,8 +13,9 @@ const CustomMap = () => {
       <OLVectorTileLayer
         url="https://vectortile.naxa.com.np/federal/district.mvt/?tile={z}/{x}/{y}"
       />
-      <Marker />
-      <Popup />
+      {/* <Marker /> */}
+      {/* <Popup /> */}
+      <DrawFeature />
     </OLMap>
   );
 };
