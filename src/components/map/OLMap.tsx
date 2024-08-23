@@ -10,8 +10,8 @@ const OLMap = ({
   center: number[];
   children: React.ReactNode;
 }) => {
-  const map = useInitializeMap({ center, zoom });
-  console.log(map);
+  // initialing map
+  useInitializeMap({ center, zoom });
 
   return (
     <div id="map" className="h-[300px] w-[80%] overflow-hidden mx-auto">
