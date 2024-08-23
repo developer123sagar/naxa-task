@@ -19,21 +19,17 @@ const DrawFeature = ({ map }: { map?: Map }) => {
 
   // Handle draw interaction
   useEffect(() => {
-    const source = new VectorSource({ wrapX: false });
-
-    const vectorLayer = new VectorLayer({
-      source: source,
-    });
-
     if (map) {
+      const source = new VectorSource({ wrapX: false });
+
+      const vectorLayer = new VectorLayer({
+        source: source,
+      });
+
       map.addLayer(vectorLayer);
-    }
 
-    if (draw && map) {
-      map.removeInteraction(draw);
-    }
+      draw && map.removeInteraction(draw);
 
-    if (map) {
       const newDraw = new Draw({
         source: source,
         type: drawType,
