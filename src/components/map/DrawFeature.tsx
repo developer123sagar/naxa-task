@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Button } from "../ui/button";
 
 type DrawType = "Point" | "LineString" | "Polygon" | "Circle";
 
@@ -41,7 +42,7 @@ const DrawFeature = ({ map }: { map?: Map }) => {
   }, [map, drawType]);
 
   return (
-    <div className="ml-5">
+    <div className="ml-5 flex items-center gap-2">
       <Select onValueChange={(value) => setDrawType(value as DrawType)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Select Geometry" />
@@ -53,6 +54,7 @@ const DrawFeature = ({ map }: { map?: Map }) => {
           <SelectItem value="Circle">Circle</SelectItem>
         </SelectContent>
       </Select>
+      <Button variant={"outline"} onClick={() => draw?.removeLastPoint()}>Undo</Button>
     </div>
   );
 };
