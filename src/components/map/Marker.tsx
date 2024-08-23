@@ -6,6 +6,15 @@ import VectorSource from "ol/source/Vector";
 import { Icon, Style } from "ol/style";
 import { useEffect, useState } from "react";
 
+// defining marker style
+const markerStyle = new Style({
+  image: new Icon({
+    src: "https://png.pngtree.com/png-vector/20210214/ourmid/pngtree-location-marker-png-image_2921053.jpg",
+    anchor: [0.5, 1],
+    scale: 0.06,
+  }),
+});
+
 const Marker = ({ map }: { map: Map }) => {
   const [markerLayer, setMarkerLayer] = useState<VectorLayer | null>(null);
 
@@ -28,14 +37,6 @@ const Marker = ({ map }: { map: Map }) => {
 
         const marker = new Feature({
           geometry: new Point(coordinates),
-        });
-
-        const markerStyle = new Style({
-          image: new Icon({
-            src: "https://png.pngtree.com/png-vector/20210214/ourmid/pngtree-location-marker-png-image_2921053.jpg",
-            anchor: [0.5, 1],
-            scale: 0.06,
-          }),
         });
 
         marker.setStyle(markerStyle);
