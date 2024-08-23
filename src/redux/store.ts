@@ -4,11 +4,14 @@ import { combineReducers } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 import { projectReducer } from "@/redux/reducers/projectReducer";
+import { mapReducer } from "@/redux/reducers/MapReducer"
 import { rootSaga } from '@/redux/sagas';
 
 // creating root reducer
 const rootReducer = combineReducers({
     project: projectReducer,
+    map: mapReducer,
+
 });
 
 // create the saga middleware

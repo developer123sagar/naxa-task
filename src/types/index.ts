@@ -6,6 +6,9 @@ export const FETCH_CATEGORY_REQUEST = 'FETCH_CATEGORY_REQUEST';
 export const FETCH_CATEGORY_SUCCESS = 'FETCH_CATEGORY_SUCCESS';
 export const FETCH_CATEGORY_FAILURE = 'FETCH_CATEGORY_FAILURE';
 
+export const UPDATE_MAP_CENTER = "UPDATE_MAP_CENTER";
+export const UPDATE_MAP_ZOOM = "UPDATE_MAP_CENTER";
+
 export interface Project {
     id: number;
     category_title: string[];
@@ -66,6 +69,18 @@ export interface FetchCategoryFailure {
     type: typeof FETCH_CATEGORY_FAILURE;
     error: string;
 }
+
+interface updateMapCenterAction {
+    type: typeof UPDATE_MAP_CENTER;
+    payload: number[];
+}
+
+interface updateMapZoomAction {
+    type: typeof UPDATE_MAP_ZOOM;
+    payload: number
+}
+
+export type MapActionTypes = updateMapCenterAction | updateMapZoomAction;
 
 export type ProjectActionTypes =
     | FetchProjectsRequest
